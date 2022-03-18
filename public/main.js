@@ -17,6 +17,7 @@ const showPrize = () =>{
 
 document.querySelector(".crush").addEventListener("click", () => {
     if (!peliRunning) {
+        document.querySelector(".prize").classList.remove('visible')
         peliRunning = true
         peli.start();
         setTimeout(showPrize, 3000);
