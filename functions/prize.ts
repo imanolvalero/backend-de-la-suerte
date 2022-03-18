@@ -1,4 +1,14 @@
-import { Response } from 'express';
+import express, { Response } from 'express';
+import cors from 'cors';
 
-export default (_, res: Response) => 
-    res.status(200).send('1F451');
+const app = express()
+
+app.use(cors({
+    origin: '*'
+}))
+
+app.get('/', (_, res: Response) => {
+    res.status(200).send('1F451')
+})
+
+export default app;
