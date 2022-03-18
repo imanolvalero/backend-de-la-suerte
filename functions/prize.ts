@@ -7,7 +7,7 @@ app.use(cors({
     origin: '*'
 }))
 
-app.get('/', (_, res: Response) => {
+app.get('/prize', (_, res: Response) => {
     res.status(200).send('1F451')
 })
 
