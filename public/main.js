@@ -1,7 +1,7 @@
 const url = 'https://eoscqrfgrtownzyndhvx.nhost.run' 
 const peli = new Freezeframe('.film', {trigger: false,});
 let peliRunning = false;
-const prize = 0x1F4A9;
+let prize = 0x1F4A9;
 
 const showPrize = () =>{
     const chest = document.querySelector(".chest")
