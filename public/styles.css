@@ -44,6 +44,6 @@ button:active {
     z-index: 9;
 }
 
-.prize.visible {
+.chest.visible {
     visibility: visible;
 }
