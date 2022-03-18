@@ -1,0 +1,49 @@
+body {
+    max-width: 1000px;
+    margin: 0px auto;
+    padding: 20px;
+    font-size: 13px;
+    text-align: center;
+    color: #202020;
+}
+
+button {
+    width: 100px;
+    margin: 0px 10px 10px 0px;
+    padding: 5px 0px;
+    border: 1px solid #000;
+    background: #fff;
+    outline: none;
+    font-family: monospace;
+    text-align: center;
+}
+
+button:active {
+    background: #000;
+    color: #fff;
+}
+
+.scene {
+    height: max-content;
+}
+
+.film {
+    position: relative;
+    left: 0;
+    top: 0;
+    z-index: 0;
+}
+.prize {
+    visibility: hidden;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    font-size: 200px;
+    top: 50%;
+    font-size: 200;
+    z-index: 9;
+}
+
+.prize.visible {
+    visibility: visible;
+}
