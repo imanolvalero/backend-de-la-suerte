@@ -33,7 +33,7 @@ button:active {
     top: 0;
     z-index: 0;
 }
-.prize {
+.chest {
     visibility: hidden;
     position: absolute;
     height: 100%;
