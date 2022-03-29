@@ -18,10 +18,6 @@ app.get('/prize', (req: Request, res: Response) => {
         httpOnly: true,
         secure: true,
     });
-    res.set('Access-Control-Request-Method', 'GET')
-    res.set('Access-Control-Allow-Origin', '*')
-    res.set('Access-Control-Allow-Method', 'GET')
-    res.set('Access-Control-Allow-Credentials', 'true')
     res.status(200).send(prize)
 })
 
