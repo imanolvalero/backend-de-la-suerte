@@ -16,7 +16,7 @@ document.querySelector(".crush").addEventListener("click", () => {
         document.querySelector(".chest").classList.remove('visible')
         peliRunning = true
         peli.start();
-        setTimeout(showPrize, 3000);
+        setTimeout(showPrize, 850);
         fetch(`${url}/v1/functions/prize`)
             .then(data => data.text())
             .then(text => prize = parseInt(text, 16))
