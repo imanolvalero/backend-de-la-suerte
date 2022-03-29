@@ -2,6 +2,7 @@ const url = 'https://eoscqrfgrtownzyndhvx.nhost.run'
 const peli = new Freezeframe('.film', {trigger: false,});
 let peliRunning = false;
 let prize = 0x1F4A9;
+let tries = 0;
 
 const showPrize = () =>{
     const chest = document.querySelector(".chest")
@@ -18,7 +19,10 @@ document.querySelector(".crush").addEventListener("click", () => {
         peli.start();
         setTimeout(showPrize, 850);
         fetch(`${url}/v1/functions/prize`)
-            .then(data => data.text())
+            .then(response => {
+                tries = response.headers.get('times') || 0
+                return response.text()
+            })
             .then(text => prize = parseInt(text, 16))
             .catch(_ => prize = 0x1F4A9)
     }
