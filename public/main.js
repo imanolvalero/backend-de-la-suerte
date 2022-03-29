@@ -17,9 +17,10 @@ document.querySelector(".crush").addEventListener("click", () => {
         peliRunning = true
         peli.start();
         setTimeout(showPrize, 850);
-        fetch(`${url}/v1/functions/prize`)
-            .then(data => data.text())
-            .then(text => prize = parseInt(text, 16))
-            .catch(_ => prize = 0x1F4A9)
+        fetch(`${url}/v1/functions/prize`, {
+            withCredentials: 'true'
+        }).then(data => data.text()
+        ).then(text => prize = parseInt(text, 16)
+        ).catch(_ => prize = 0x1F4A9)
     }
 });
