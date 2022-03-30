@@ -6,7 +6,10 @@ const PRICE_EFFORT: number = 4
 
 const app: express.Application = express()
 
-app.use(cors({origin: ['imanolvalero.github.io', 'localhost']}))
+app.use(cors({
+    credentials: true,
+    origin: 'https://imanolvalero.github.io'
+}))
 app.use(cookieParser())
 
 
