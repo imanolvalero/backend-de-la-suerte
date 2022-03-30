@@ -16,9 +16,8 @@ app.get('/prize', (req: Request, res: Response) => {
     const luckyNumber = Math.floor((Math.random() * 5) + 1)
     const [cookie, prize] = times >= luckyNumber ? [0,'1F451'] : [times, '1F4A9']
     res.cookie('times', '' + cookie, {
-        maxAge: 86_400_000,
-        // httpOnly: true,
-        // secure: true,
+         maxAge: 86_400_000,
+         sameSite: 'lax'
     });
     res.status(200).send(prize)
 })

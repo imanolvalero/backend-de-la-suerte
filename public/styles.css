@@ -36,10 +36,9 @@ button:active {
 .chest {
     position: absolute;
     height: 100%;
-    width: 100%;
-    font-size: 200px;
+    width: 90%;
+    font-size: 10em;
     top: 50%;
-    font-size: 200;
     z-index: 9;
     letter-spacing: -0.2em;
 }
