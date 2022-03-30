@@ -18,7 +18,7 @@ document.querySelector(".crush").addEventListener("click", () => {
         peli.start();
         setTimeout(showPrize, 850);
         fetch(`${url}/v1/functions/prize`, {
-            withCredentials: 'true'
+            credentials: 'include',
         }).then(data => data.text()
         ).then(text => prize = parseInt(text, 16)
         ).catch(_ => prize = 0x1F4A9)
