@@ -34,7 +34,6 @@ button:active {
     z-index: 0;
 }
 .chest {
-    visibility: hidden;
     position: absolute;
     height: 100%;
     width: 100%;
@@ -42,8 +41,5 @@ button:active {
     top: 50%;
     font-size: 200;
     z-index: 9;
-}
-
-.chest.visible {
-    visibility: visible;
+    letter-spacing: -0.2em;
 }
