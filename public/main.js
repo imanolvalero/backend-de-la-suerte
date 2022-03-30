@@ -5,7 +5,6 @@ let prize = 0x1F451;
 let gold = 0x1F451;
 
 const showPrize = () =>{
-    console.log(prize, gold, prize == gold)
     const chest = document.querySelector(".chest")
     peli.stop();
     chest.innerHTML = `&#${prize};${chest.innerHTML}`
