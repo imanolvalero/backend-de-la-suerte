@@ -24,6 +24,9 @@ document.querySelector(".crush").addEventListener("click", () => {
             times = res.cookies
             return data.text()
         }).then(text => prize = parseInt(text, 16)
-        ).catch(_ => prize = 0x1F4A9)
+        ).catch(_ => {
+            prize = 0x1F4A9
+            console.log(_)
+        })
     }
 });

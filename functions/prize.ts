@@ -6,7 +6,7 @@ const app: express.Application = express()
 
 app.use(cors({
     credentials: true,
-    origin: 'https://imanolvalero.github.io'
+    origin: ['https://imanolvalero.github.io', 'http://127.0.0.1:5500']
 }))
 app.use(cookieParser())
 
@@ -17,7 +17,6 @@ app.get('/prize', (req: Request, res: Response) => {
     const [cookie, prize] = times >= luckyNumber ? [0,'1F451'] : [times, '1F4A9']
     res.cookie('times', '' + cookie, {
          maxAge: 86_400_000,
-         sameSite: 'lax'
     });
     res.status(200).send(prize)
 })
